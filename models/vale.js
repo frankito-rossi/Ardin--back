@@ -21,6 +21,10 @@ const pagoSchema = new Schema({
     pago: {
       type: Boolean,
       default: false
+    },
+    mora: {
+      type: Number,
+      default: 0
     }
 }, {
     timestamps: true
@@ -64,6 +68,11 @@ const valeSchema = new Schema({
     },
     pagos: [pagoSchema],
     interes: {
+      //type: Schema.Types.ObjectId,
+      //ref:'Interes'
+      type: Number,
+    },
+    mora: {
       //type: Schema.Types.ObjectId,
       //ref:'Interes'
       type: Number,
